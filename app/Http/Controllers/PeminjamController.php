@@ -147,22 +147,31 @@ class PeminjamController extends Controller
 
 
         // dd($peminjam->stokbarang1);
-        if ($kodeBarang1->stok >= $peminjam->stokbarang1) {
-            $kodeBarang1->decrement('stok', $peminjam->stokbarang1);
-        } else {
-            return back()->with('fail1', 'stok barang tidak mencukupi');
+        if ($kodeBarang1)
+        {
+            if ($kodeBarang1->stok >= $peminjam->stokbarang1) {
+                $kodeBarang1->decrement('stok', $peminjam->stokbarang1);
+            } else {
+                return back()->with('fail1', 'stok barang tidak mencukupi');
+            }
         }
 
-        if ($kodeBarang2->stok >= $peminjam->stokbarang2) {
-            $kodeBarang2->decrement('stok', $peminjam->stokbarang2);
-        } else {
-            return back()->with('fail1', 'stok barang tidak mencukupi');
+        if ($kodeBarang2)
+        {
+            if ($kodeBarang2->stok >= $peminjam->stokbarang2) {
+                $kodeBarang2->decrement('stok', $peminjam->stokbarang2);
+            } else {
+                return back()->with('fail1', 'stok barang tidak mencukupi');
+            }
         }
 
-        if ($kodeBarang3->stok >= $peminjam->stokbarang3) {
-            $kodeBarang3->decrement('stok', $peminjam->stokbarang3);
-        } else {
-            return back()->with('fail1', 'stok barang tidak mencukupi');
+        if ($kodeBarang3)
+        {
+            if ($kodeBarang3->stok >= $peminjam->stokbarang3) {
+                $kodeBarang3->decrement('stok', $peminjam->stokbarang3);
+            } else {
+                return back()->with('fail1', 'stok barang tidak mencukupi');
+            }
         }
 
         return redirect()->back();
