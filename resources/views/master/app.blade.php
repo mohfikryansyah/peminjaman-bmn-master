@@ -38,10 +38,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap" rel="stylesheet">
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
     
-    {{-- <link rel="stylesheet" href="{{ asset('build/assets/app-108fb6df.css') }}" data-navigate-track="reload"/>
-    <script type="module" src="{{ asset('build/assets/app-c8ff57e5.js') }}" data-navigate-track="reload"></script>  --}}
+    <link rel="stylesheet" href="{{ asset('build/assets/app-0f47090b.css') }}" data-navigate-track="reload"/>
+    <script type="module" src="{{ asset('build/assets/app-c8ff57e5.js') }}" data-navigate-track="reload"></script> 
 </head>
 
 <body class="font-poppins">

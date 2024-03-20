@@ -8,7 +8,21 @@
 </head>
 <body>
     <h1>{{ $infoMail['title'] }}</h1>
-    <p>Informasi tanggal pengembalian barang : {{ $infoMail['barang'] }}, tersisa {{ $infoMail['selisih'] }} Hari!</p>
+    <p>Informasi tanggal pengembalian barang : 
+        @isset($infoMail['barang1'])
+        {{ $infoMail['barang1'] }}
+        @endisset
+
+        @isset($infoMail['barang2'])
+        {{ $infoMail['barang2'] }}
+        @endisset
+
+        @isset($infoMail['barang3'])
+        {{ $infoMail['barang3'] }}
+        @endisset
+
+        
+        , tersisa {{ $infoMail['selisih'] }} Hari!</p>
     <p>Segera lakukan pengembalian barang.</p>
 </body>
 </html>
