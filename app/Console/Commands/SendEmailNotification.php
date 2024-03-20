@@ -39,6 +39,11 @@ class SendEmailNotification extends Command
                     'barang1' => $peminjam->barang1,
                     'barang2' => $peminjam->barang2,
                     'barang3' => $peminjam->barang3,
+                    'stokbarang1' => $peminjam->stokbarang1,
+                    'stokbarang2' => $peminjam->stokbarang2,
+                    'stokbarang3' => $peminjam->stokbarang3,
+                    'foto' => $peminjam->fotoProfile,
+                    'pangkat' => $peminjam->pangkat,
                     'selisih' => $selisihHari,
                 ];
 
