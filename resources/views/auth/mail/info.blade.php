@@ -367,7 +367,7 @@
                                             <tr>
                                                 <td style="text-align: left; padding-right: 10px;">
                                                     <h3 class="heading">{{ $infoMail['barang1'] }}</h3>
-                                                    <p>{{ $infoMail['stokbarang1'] }}</p>
+                                                    <p>{{ $infoMail['stokbarang1'] }} Unit</p>
                                                 </td>
                                             </tr>
                                         </table>
@@ -388,7 +388,7 @@
                                             <tr>
                                                 <td style="text-align: left; padding-right: 10px;">
                                                     <h3 class="heading">{{ $infoMail['barang2'] }}</h3>
-                                                    <p>{{ $infoMail['stokbarang2'] }}</p>
+                                                    <p>{{ $infoMail['stokbarang2'] }} Unit</p>
                                                 </td>
                                             </tr>
                                         </table>
@@ -409,7 +409,7 @@
                                             <tr>
                                                 <td style="text-align: left; padding-right: 10px;">
                                                     <h3 class="heading">{{ $infoMail['barang3'] }}</h3>
-                                                    <p>{{ $infoMail['stokbarang3'] }}</p>
+                                                    <p>{{ $infoMail['stokbarang3'] }} Unit</p>
                                                 </td>
                                             </tr>
                                         </table>
