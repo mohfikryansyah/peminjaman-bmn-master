@@ -156,7 +156,7 @@
             @endif
 
 
-            {{-- @if (!empty($peminjam->barang2))
+            @if (!empty($peminjam->barang2))
                 <div class="mb-3 col-span-1">
                     <label for="barang2" class="block mb-2 text-sm font-semibold text-gray-700 dark:text-white">Barang
                         Kedua</label>
@@ -234,7 +234,7 @@
                         min="0" value="{{ old('seriNUP3', $peminjam->seriNUP3) }}"
                         {{ $peminjam->seriNUP3 ? 'readOnly' : '' }}>
                 </div>
-            @endif --}}
+            @endif
         </div>
         <div class="flex">
             @role('ADMIN')
