@@ -29,13 +29,15 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         $validatedData = $request->validate([
             'nama' => 'required',
             'stokawal' => 'required',
-            'stok' => 'required',
             'kode_barang' => 'required|unique:barangs',
             'satuan' => 'required',
         ]);
+
+        $validatedData['stok'] = $validatedData['stokawal'];
 
         Barang::create($validatedData);
         return redirect()->back()->with('BARANG_STORED', 'Barang berhasil ditambahkan');
