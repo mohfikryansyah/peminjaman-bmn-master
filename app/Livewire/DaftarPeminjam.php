@@ -26,8 +26,11 @@ class DaftarPeminjam extends Component
     public function render()
     {
         return view('livewire.daftar-peminjam', [
-            'peminjams' => Peminjam::where('status', 'like', '%' . $this->search . '%')
-                // ->orWhere('nama', 'like', '%'.$this->search.'%')
+            'peminjams' => Peminjam::with(['user'])
+                ->whereHas('user', function ($query) {
+                    $query->where('name', 'like', '%' . $this->search . '%');
+                })
+                ->orWhere('status', 'like', '%' . $this->search . '%')
                 ->latest()
                 ->simplePaginate(7),
             'peminjamAdmin' => Peminjam::where('status', 'like', '%' . $this->search . '%')
